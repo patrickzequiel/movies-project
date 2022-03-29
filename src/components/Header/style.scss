@@ -1,0 +1,58 @@
+@import "../../styles/global.scss";
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header__menu {
+  &__links {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    padding: 10px;
+  }
+
+  &__icon {
+    padding: 10px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.active {
+  color: $color-text;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 4px;
+  background-color: $color-highlight;
+  margin-top: 10px;
+  border-radius: 10px;
+}

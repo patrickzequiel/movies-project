@@ -1,0 +1,54 @@
+$color-text: #12153d;
+$color-text-light: #9a9bb2;
+$color-text-category: #434670;
+$color-white: #ffffff;
+$color-star: #fcc419;
+$color-score: #51cf66;
+$color-highlight: #fe6d8e;
+
+$screen-phone: 600px;
+$mobile-margin: 15px;
+$tablet-margin: 84px;
+$desktop-margin: 150px;
+$screen-xl: 1200px;
+$screen-sm-min: 768px !default;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Lato", sans-serif;
+  font-family: "Manrope", sans-serif;
+
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $color-text-light;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}

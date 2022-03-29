@@ -1,0 +1,51 @@
+@import "../../styles/global.scss";
+
+.menuNav {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar__button {
+  display: grid;
+}
+
+.search__icon {
+  display: grid;
+  justify-items: end;
+}
+
+.header__menu__links {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr;
+  color: $color-text-light;
+  font-weight: bold;
+
+  @media screen and (min-width: $screen-sm-min) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.active {
+  color: $color-text;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 4px;
+  background-color: $color-highlight;
+  margin-top: 10px;
+  border-radius: 10px;
+
+  @media screen and (min-width: $screen-sm-min) {
+    width: 20%;
+  }
+}
