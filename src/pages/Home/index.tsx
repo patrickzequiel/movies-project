@@ -1,8 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
-import Card from "../../components/Card/index";
+import Movies from "../../components/Movies";
 
+import './styles.scss'
 
 const Home = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
@@ -11,7 +12,10 @@ const Home = () => {
     <>
       {isMobile ? <SideBar /> : <Header />}
 
-      <Card />
+      <div className="container">
+      <Movies />
+
+      </div>
     </>
   );
 };

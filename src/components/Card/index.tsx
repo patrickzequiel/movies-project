@@ -3,34 +3,41 @@ import { connect } from "react-redux";
 
 import { getMovies } from "../../services/api";
 
-interface IProps {
-  getMovies: () => void;
-  movies: any;
+import "./styles.scss";
+
+interface CardProps {
+    imdbID: number;
+    Poster: string;
+    Title: string;
 }
 
-class movies extends Component<IProps> {
-  constructor(props: IProps) {
-    super(props);
-    this.props.getMovies();
-  }
-
-  render() {
-    const { movies } = this.props.movies;
-    // JSON.stringify(movies)
-
-    console.log(movies.Search);
+const Card = ({imdbID, Poster, Title}: CardProps) => {
+    console.log(Poster)
     return (
-      <div>
-        {movies.Search.map((movie) => (
-          <React.Fragment key={movie.imdbID}>
-            <h6>{movie.Title}</h6>
-          </React.Fragment>
-        ))}
-      </div>
-    );
-  }
+          <div className="card" key={imdbID}>
+            <div
+              className="card__bg"
+              style={{
+                backgroundImage: `url(${Poster})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <h6>{Title}</h6>
+          </div>
+    )
 }
 
-const mapStateToProps = (state) => ({ movies: state.movies });
+export default Card;
 
-export default connect(mapStateToProps, { getMovies })(movies);
+{/* {movies.Search.map((movie) => (
+          <div className="card" key={movie.imdbID}>
+            <div
+              className="card__bg"
+              style={{
+                backgroundImage: `url(${movie.Poster})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <h3>{movie.Title}</h3>
+          </div>
+            ))} */}
