@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
-import Movies from "../../components/Movies";
+import {Movies} from "../../components/Movies";
 
 import './styles.scss'
 

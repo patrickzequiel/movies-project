@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { getMovies } from "../../services";
+
+import { useTypedSelector } from "../../hooks/useTypeSelector";
+import { getMovies } from "../../redux/actionCreators/index";
 import Card from "../Card";
 
 interface IProps {
@@ -9,11 +11,12 @@ interface IProps {
   movies: any;
 }
 
-const Movies = () => {
-  const [movies, setMovies] = useState([]);
+export const Movies = () => {
+  const dispatch = useDispatch();
+  const { movies, loading, error } = useTypedSelector((state) => state.movies);
 
   useEffect(() => {
-    getMovies().then((movies) => setMovies(movies));
+    dispatch(getMovies());
   }, []);
 
   return (
@@ -28,7 +31,3 @@ const Movies = () => {
     </>
   )
 };
-
-const mapStateToProps = (state) => ({ movies: state.movies });
-
-export default connect(mapStateToProps, { getMovies })(Movies);

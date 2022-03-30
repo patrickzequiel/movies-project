@@ -34,6 +34,18 @@
 
 .active {
   color: $color-text;
+  transition: 0.9s;
+}
+
+.active:hover::after {
+  transform: translateX(0);
+  content: "";
+  display: block;
+  width: 20%;
+  height: 4px;
+  background-color: $color-highlight;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .active::after {
@@ -44,8 +56,5 @@
   background-color: $color-highlight;
   margin-top: 10px;
   border-radius: 10px;
-
-  @media screen and (min-width: $screen-sm-min) {
-    width: 20%;
-  }
+  transition: 0.9s;
 }

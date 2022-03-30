@@ -1,8 +1,5 @@
-import React, { Component, useEffect, useState } from "react";
-import { connect } from "react-redux";
 
-import { getMovies } from "../../services/api";
-
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 interface CardProps {
@@ -14,7 +11,7 @@ interface CardProps {
 const Card = ({imdbID, Poster, Title}: CardProps) => {
     console.log(Poster)
     return (
-          <div className="card" key={imdbID}>
+          <Link className="card" key={imdbID} to="/">
             <div
               className="card__bg"
               style={{
@@ -23,21 +20,8 @@ const Card = ({imdbID, Poster, Title}: CardProps) => {
               }}
             ></div>
             <h6>{Title}</h6>
-          </div>
+          </Link>
     )
 }
 
 export default Card;
-
-{/* {movies.Search.map((movie) => (
-          <div className="card" key={movie.imdbID}>
-            <div
-              className="card__bg"
-              style={{
-                backgroundImage: `url(${movie.Poster})`,
-                backgroundSize: "cover",
-              }}
-            ></div>
-            <h3>{movie.Title}</h3>
-          </div>
-            ))} */}

@@ -38,6 +38,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: $color-text-light;
+  transition: 0.2s;
 }
 
 input {
@@ -51,4 +52,9 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $color-text;
 }

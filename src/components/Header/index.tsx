@@ -17,13 +17,13 @@ const Header = () => {
         <div className="header__menu">
           <ul className="header__menu__links">
             <li>
-              <NavLink style={({ isActive }) => (isActive ? {} : {})} to="/">Home</NavLink>
+              <NavLink className="nav__menu" style={({ isActive }) => (isActive ? {} : {})} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink style={({ isActive }) => (isActive ? {} : {})} to="/about">About</NavLink>
+              <NavLink className="nav__menu" style={({ isActive }) => (isActive ? {} : {})} to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink style={({ isActive }) => (isActive ? {} : {})}to="/contact">Contact</NavLink>
+              <NavLink className="nav__menu" style={({ isActive }) => (isActive ? {} : {})}to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
