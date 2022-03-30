@@ -1,20 +1,13 @@
+@import "../../styles/global.scss";
+
 .container {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-content: center;
   justify-items: center;
 }
-
-.card__bg {
-  background-color: rgb(48, 40, 40);
-  border-radius: 4px;
-  height: 460px;
-  width: 310px;
-  border-radius: 10%;
-}
-
 .card {
   display: grid;
   gap: 10px;
@@ -22,14 +15,39 @@
   align-items: center;
   justify-content: center;
   justify-items: center;
+  transition: 0.2s;
+  height: 400px;
+  width: 200px;
 }
 
-.card:hover {
+.card__bg {
+  background-color: rgb(48, 40, 40);
+  border-radius: 4px;
+  height: 300px;
+  width: 200px;
+  border-radius: 10%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
 }
 
-h3 {
-  font-size: 32px;
+.card__bg:hover {
+  transform: scale(1.05);
+}
+
+p {
   display: grid;
   justify-content: center;
+  color: $color-text;
+  text-align: center;
+}
+
+.card__score {
+  font-size: 14px;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  color: $color-text;
 }

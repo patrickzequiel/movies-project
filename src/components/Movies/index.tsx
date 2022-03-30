@@ -26,6 +26,7 @@ export const Movies = () => {
           imdbID={movie.id}
           Poster={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
           Title={movie.title}
+          Score={movie.vote_average}
         />
       ))}
     </>
