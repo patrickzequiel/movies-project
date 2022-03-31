@@ -1,0 +1,62 @@
+.container__movie {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.info__movie {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.backdrop {
+  width: 100%;
+}
+.movie__title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .movie__title {
+    font-size: 50px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .movie__title {
+    font-size: 35px;
+    text-align: left;
+  }
+}
+
+.movie__container {
+  width: 100%;
+  display: grid;
+}
+
+.movie__summary {
+  margin-top: 40px;
+  display: grid;
+  gap: 10px;
+}
+
+.production__companies {
+  margin-top: 40px;
+  display: grid;
+  gap: 10px;
+}
+
+.movie__infos {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}

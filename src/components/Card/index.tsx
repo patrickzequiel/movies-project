@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card = ({ imdbID, Poster, Title, Score }: CardProps) => {
   return (
-    <Link className="card" key={imdbID} to="/">
+    <Link className="card" key={imdbID} to={`/movie/${imdbID}`}>
       <div
         className="card__bg"
         style={{

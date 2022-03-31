@@ -1,0 +1,57 @@
+@import "../../styles/global.scss";
+
+.rating__container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 50px;
+  align-items: center;
+  width: 400px;
+}
+
+.rating__score {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 14px;
+}
+
+.rating__vote {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 14px;
+}
+
+.rating__meta {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 14px;
+}
+.box__meta {
+  background-color: $color-score;
+  color: $color-white;
+  border-radius: 10%;
+  padding: 4px;
+}
+
+.font__meta {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.info__scores {
+  font-weight: bold;
+}
